@@ -407,157 +407,133 @@ insertCss(`
   }
 `);
 
-const data = {
+const rawData = {
   nodes: [
     {
       "id": "TVF-D1002-AMS-001",
-      "isLeaf": false,
-      "region": "ClusterG"
+      "isLeaf": false
     },
     {
       "id": "TVF-C9102-AMS-002",
       "isLeaf": true,
-      "region": "ClusterG"
+      "region": "ClusterA"
     },
     {
       "id": "TVF-C9102-AMS-001",
       "isLeaf": true,
-      "region": "ClusterG"
+      "region": "ClusterB"
     },
     {
       "id": "TVF-D1002-AMS-002",
-      "isLeaf": false,
-      "region": "ClusterG"
+      "isLeaf": false
     },
     {
       "id": "TVF-C9102-AMS-003",
       "isLeaf": true,
-      "region": "ClusterG"
+      "region": "ClusterA"
     },
     {
       "id": "TVF-C9102-AMS-004",
       "isLeaf": true,
-      "region": "ClusterG"
+      "region": "ClusterB"
     },
     {
       "id": "TVF-CSR1000-AMS-001",
-      "isLeaf": false,
-      "region": "ClusterG"
+      "isLeaf": false
     },
     {
       "id": "TVF-CSR1000-AMS-002",
-      "isLeaf": false,
-      "region": "ClusterG"
+      "isLeaf": false
     },
     {
       "id": "TVF-D1001-AMS-005",
-      "isLeaf": false,
-      "region": "ClusterG"
+      "isLeaf": false
     },
     {
       "id": "TVF-C9006-AH-001",
-      "isLeaf": true,
-      "region": "ClusterG"
+      "isLeaf": true
     },
     {
       "id": "TVF-CCRS1-AMS-200",
-      "isLeaf": true,
-      "region": "ClusterG"
+      "isLeaf": true
     },
     {
       "id": "ams-dc0001-gr101",
       "isLeaf": true,
-      "region": "ClusterG"
+      "region": "ClusterB"
     },
     {
       "id": "TVF-D1002-AMS-005",
-      "isLeaf": true,
-      "region": "ClusterG"
+      "isLeaf": true
     },
     {
       "id": "TVF-C9001-MT-001",
-      "isLeaf": true,
-      "region": "ClusterG"
+      "isLeaf": true
     },
     {
       "id": "TVF-C9001-AMS-002",
-      "isLeaf": true,
-      "region": "ClusterG"
+      "isLeaf": true
     },
     {
       "id": "TVF-C9006-AMS-001",
-      "isLeaf": true,
-      "region": "ClusterG"
+      "isLeaf": true
     },
     {
       "id": "TVF-D1006-AMS-004",
-      "isLeaf": true,
-      "region": "ClusterD"
+      "isLeaf": true
     },
     {
       "id": "TVF-C9901-AMS-001",
-      "isLeaf": true,
-      "region": "ClusterD"
+      "isLeaf": true
     },
     {
       "id": "TVF-CCRS1-UT-200",
-      "isLeaf": true,
-      "region": "ClusterD"
+      "isLeaf": true
     },
     {
       "id": "TVF-C9001-HM-002",
-      "isLeaf": true,
-      "region": "ClusterD"
+      "isLeaf": true
     },
     {
       "id": "TVF-D1002-AMS-004",
-      "isLeaf": true,
-      "region": "ClusterG"
+      "isLeaf": true
     },
     {
       "id": "TVF-D1002-AMS-006",
-      "isLeaf": true,
-      "region": "ClusterG"
+      "isLeaf": true
     },
     {
       "id": "TVF-C9006-AMS-003",
-      "isLeaf": true,
-      "region": "ClusterD"
+      "isLeaf": true
     },
     {
       "id": "TVF-C9901-AMS-002",
-      "isLeaf": true,
-      "region": "ClusterD"
+      "isLeaf": true
     },
     {
       "id": "TVF-C9006-AMS-002",
-      "isLeaf": true,
-      "region": "ClusterG"
+      "isLeaf": true
     },
     {
       "id": "TVF-C9001-AMS-003",
-      "isLeaf": true,
-      "region": "ClusterG"
+      "isLeaf": true
     },
     {
       "id": "ams-tr0021-gr101",
       "isLeaf": true,
-      "region": "ClusterG"
+      "region": "ClusterB"
     },
     {
       "id": "TVF-C9001-MT-002",
-      "isLeaf": true,
-      "region": "ClusterG"
+      "isLeaf": true
     },
     {
       "id": "TVF-D1004-AH-001",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "TVF-D1004-AH-002",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "TVF-C9910-AH-001",
@@ -571,13 +547,11 @@ const data = {
     },
     {
       "id": "TVF-D1006-EHV-001",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "TVF-D1006-EHV-002",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "TVF-C9910-EHV-001",
@@ -596,38 +570,31 @@ const data = {
     },
     {
       "id": "TVF-D1004-AMS-231",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "TVF-D1001-AMS-001",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "TVF-D1001-AMS-002",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "TVF-D1004-UT-231",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "TVF-D1001-UT-002",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "TVF-D1002-HRL-001",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "TVF-D1001-UT-001",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "NLSPL1PE01",
@@ -637,7 +604,7 @@ const data = {
     {
       "id": "ams-dc0001-dr109",
       "isLeaf": true,
-      "region": "ClusterF"
+      "region": "ClusterA"
     },
     {
       "id": "slr-tr0004-gr103-new",
@@ -722,7 +689,7 @@ const data = {
     {
       "id": "nls-tbg01a-ra60",
       "isLeaf": true,
-      "region": "ClusterG"
+      "region": "ClusterA"
     },
     {
       "id": "re0-ams-tr0042-dr101",
@@ -767,7 +734,7 @@ const data = {
     {
       "id": "ams-tr0021-dr109",
       "isLeaf": true,
-      "region": "ClusterF"
+      "region": "ClusterB"
     },
     {
       "id": "slr-tr0004-gr104-new",
@@ -862,7 +829,7 @@ const data = {
     {
       "id": "nls-tbg01a-ra50",
       "isLeaf": true,
-      "region": "ClusterG"
+      "region": "ClusterB"
     },
     {
       "id": "gn-dc0002-gr102",
@@ -891,618 +858,495 @@ const data = {
     },
     {
       "id": "ams-dc0001-dr101",
-      "isLeaf": true,
-      "region": "ClusterE"
+      "isLeaf": true
     },
     {
       "id": "ams-dc0001-rr101",
-      "isLeaf": true,
-      "region": "ClusterF"
+      "isLeaf": true
     },
     {
       "id": "ams-dc0001-rr102",
-      "isLeaf": true,
-      "region": "ClusterF"
+      "isLeaf": true
     },
     {
       "id": "ams-dc0001-rr103",
-      "isLeaf": true,
-      "region": "ClusterF"
+      "isLeaf": true
     },
     {
       "id": "ams-dc0001-rr104",
-      "isLeaf": true,
-      "region": "ClusterF"
+      "isLeaf": true
     },
     {
       "id": "ams-dc0001-rr107",
-      "isLeaf": true,
-      "region": "ClusterF"
+      "isLeaf": true
     },
     {
       "id": "ams-tr0021-rr101",
-      "isLeaf": true,
-      "region": "ClusterF"
+      "isLeaf": true
     },
     {
       "id": "ams-tr0021-rr102",
-      "isLeaf": true,
-      "region": "ClusterF"
+      "isLeaf": true
     },
     {
       "id": "ams-tr0021-rr103",
-      "isLeaf": true,
-      "region": "ClusterF"
+      "isLeaf": true
     },
     {
       "id": "ams-tr0021-rr104",
-      "isLeaf": true,
-      "region": "ClusterF"
+      "isLeaf": true
     },
     {
       "id": "ams-tr0021-rr107",
-      "isLeaf": true,
-      "region": "ClusterF"
+      "isLeaf": true
     },
     {
       "id": "AH-TR0009-DR101",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "HTN-S03555-CR104",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "AH-TR0009-DR102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "HTN-S03555-CR103",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "EHV-TR0001-DR101",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "EHV-TR0001-DR102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "tb-dc0001-dr171",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "tb-dc0001-dr172",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "hm-dc0100-dr301",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "hm-dc0100-dr302",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "hm-dc0100-dr303",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "hm-dc0100-dr304",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "tb-dc0001-dr301",
-      "isLeaf": false,
-      "region": "ClusterG"
+      "isLeaf": false
     },
     {
       "id": "tb-dc0001-dr302",
-      "isLeaf": false,
-      "region": "ClusterG"
+      "isLeaf": false
     },
     {
       "id": "tb-dc0001-dr303",
-      "isLeaf": false,
-      "region": "ClusterG"
+      "isLeaf": false
     },
     {
       "id": "tb-dc0001-dr304",
-      "isLeaf": false,
-      "region": "ClusterG"
+      "isLeaf": false
     },
     {
       "id": "tb-dc0001-dr305",
-      "isLeaf": false,
-      "region": "ClusterG"
+      "isLeaf": false
     },
     {
       "id": "tb-dc0001-dr306",
-      "isLeaf": false,
-      "region": "ClusterG"
+      "isLeaf": false
     },
     {
       "id": "tb-dc0001-dr307",
-      "isLeaf": false,
-      "region": "ClusterG"
+      "isLeaf": false
     },
     {
       "id": "tb-dc0001-dr308",
-      "isLeaf": false,
-      "region": "ClusterG"
+      "isLeaf": false
     },
     {
       "id": "rt-dc0173-dr301",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "rt-dc0173-dr302",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "slr-tr0004-dr371",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "SLR-TR0004-DR101",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "slr-tr0004-gr303",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "slr-tr0004-dr372",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "SLR-TR0004-DR102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "slr-tr0004-gr304",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "AMS-TR0021-DR107",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "RT-RC0173-DR107",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "AMS-TR0021-DR103",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "ams-tr0006-dr102",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "ams-tr0409-dr102",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "ams-tr0610-dr102",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "ams-tr0042-dr102",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "ams-dc0001-dr102",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "ams-tr0021-dr102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "ams-tr0021-gr303",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "ams-tr0021-gr304",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "tb-dc0001-gr303",
-      "isLeaf": false,
-      "region": "ClusterG"
+      "isLeaf": false
     },
     {
       "id": "tb-dc0001-gr304",
-      "isLeaf": true,
-      "region": "ClusterG"
+      "isLeaf": true
     },
     {
       "id": "mnd-dc0002-dr171",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "mnd-dc0002-dr172",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "HM-RC0100-DR105",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "HM-RC0100-DR106",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "RT-RC0173-DR105",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "RT-RC0173-DR106",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nls-mnd01a-ra2",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "nls-ams02a-rb3",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "nls-ams02a-rb4",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nls-zut01a-rb1",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nls-zut01a-rb2",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "zp-dc0100-dr101",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "zp-dc0100-dr102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "ehv-dc0002-dr102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "ams-tr0410-dr106",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nls-ams02a-rb1",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nls-ams02a-rb2",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nls-hlm01a-rb1",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nls-hlm01a-rb2",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "hm-dc0100-dr102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "hm-dc0100-dr104",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "hm-dc0100-dr103",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nls-rtm02a-rb1",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nls-rtm02a-rb2",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "rt-lc0100-dr102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nls-ley01a-rb1",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nls-ley01a-rb2",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "lls-dc0100-dr101",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "lls-dc0100-dr102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nls-hrv01a-rb1",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nls-hrv01a-rb2",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nls-nij01a-rb1",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nls-nij01a-rb2",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nm-dc0100-dr102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nm-dc0100-dr101",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "nls-rtm03a-rb1",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "nls-rtm03a-rb2",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "rt-dc0173-dr102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "weer-dc0002-dr102",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "venls-dc0003-dr102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "asn-dc0002-dr102",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "gn-dc0002-dr102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "gv-dc0010-dr102",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "gv-dc0052-dr102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "vnn-dc0001-dr102",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "amr-dc0010-dr102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "mnd-dc0001-dr102",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "hvs-dc0002-dr102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "dv-dc0001-dr102",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "zl-dc0001-dr102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "tb-dc0001-dr102",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "ht-dc0001-dr102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "re0-mnd-dc0002-gr103",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "re0-mnd-dc0002-gr104",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "re0-tb-dc0001-gr103",
-      "isLeaf": false,
-      "region": "ClusterH"
+      "isLeaf": false
     },
     {
       "id": "re0-tb-dc0001-gr104",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "re0-ams-tr0409-dr101",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "re0-ams-tr0410-dr102",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "re0-gn-dc0002-dr101",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "re0-emn-dc0001-dr101",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "re0-zl-dc0001-dr101",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "re0-ht-dc0001-dr101",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "re0-tb-dc0001-dr101",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "re0-bd-dc0002-dr101",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "re0-ah-tr0002-dr108",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "re0-vnn-dc0001-dr101",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "re0-mnd-dc0001-dr101",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "re0-gv-dc0010-dr101",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "re0-rt-tr0006-dr108",
-      "isLeaf": true,
-      "region": "ClusterH"
+      "isLeaf": true
     },
     {
       "id": "TVF-C9001-HM-001",
-      "isLeaf": false,
-      "region": "ClusterC"
+      "isLeaf": false
     },
     {
       "id": "TVF-D1002-AMS-003",
-      "isLeaf": false,
-      "region": "ClusterC"
+      "isLeaf": false
     }
   ],
    edges : [
@@ -4485,6 +4329,18 @@ const data = {
   ]
 }
 
+const data = {
+  nodes: rawData.nodes.map((e) => {
+    return {
+      ...e,
+      id: e.id,
+      label: e.id,
+      panels: [{ title: e.id }],
+    };
+  }),
+  edges: rawData.edges
+};
+
 const animateCfg = { duration: 200, easing: "easeCubic" };
 
 const edgeColors = data.edges.map(() => chroma.random().hex());
@@ -4800,7 +4656,7 @@ nodes.forEach(function(n) {
     stroke: '#666',
     lineWidth: 3,
   };
-  n.style.size = 70;
+  n.style.size = 570;
   n.cluster = clusterId;
   // n.importValue = 0;
   // n.exportValue = 0;
@@ -4833,8 +4689,8 @@ edges.forEach(function (e) {
 
 // Utility function to map values to a specific property
 function mapValueToProp(items, valueName, propName, range) {
-  const valueRange = [ 9999999999, -9999999999 ];
-  items.forEach(function(n) {
+  const valueRange = [9999999999, -9999999999];
+  items.forEach(function (n) {
     if (n[valueName] > valueRange[1]) valueRange[1] = n[valueName];
     if (n[valueName] < valueRange[0]) valueRange[0] = n[valueName];
   });
@@ -4842,19 +4698,18 @@ function mapValueToProp(items, valueName, propName, range) {
   const rLength = range[1] - range[0];
   const propNameStrs = propName.split('.');
   if (propNameStrs[0] === 'style' && propNameStrs.length > 1) {
-    items.forEach(function(n) {
+    items.forEach(function (n) {
       if (n.style === undefined) n.style = {};
       n.style[propNameStrs[1]] = rLength * (n[valueName] - valueRange[0]) / valueLength + range[0];
     });
   } else {
-    items.forEach(function(n) {
+    items.forEach(function (n) {
       n[propNameStrs[0]] = rLength * (n[valueName] - valueRange[0]) / valueLength + range[0];
     });
   }
 }
 
-
-mapValueToProp(nodes, 'exportValue', 'sizee', [2, 12]);
+mapValueToProp(edges, 'value', 'style.lineWidth', [1, 10]);
 
 const graph = new G6.Graph({
   container: graphDiv,
@@ -4879,7 +4734,7 @@ const graph = new G6.Graph({
   },
   defaultNode: {
      type: "image",
-  size: [270, 270],
+  size: [570, 570],
   img: 'data:image/svg+xml,<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools --><svg width="256px" height="256px" viewBox="-102.4 -102.4 1228.80 1228.80" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="%23000000" transform="rotate(0)matrix(-1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" strokeWidth="0"/><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" stroke="%23CCCCCC" strokeWidth="28.672000000000004"><path d="M77 403.4v228.5c1.5 93.7 195.7 183.5 435 183.5s433.4-89.8 435-183.5V403.4H77z" fill="%231B9BDB"/><path d="M947 402.7c0 99.4-194.8 194-435 194s-435-94.6-435-194 194.8-180 435-180 435 80.5 435 180z" fill="%233ED6FF"/><path d="M474.1 311.4H503l0.1 63.2h29.5l-0.7-63.2h28.9l-43.7-75.1zM533 417.2h-29.9l0.1 73.9h-30.6l46.2 75.2 45.5-75.2h-30.6zM654.5 380.9l-1.4-30-72.1 45 76.4 45.1-1.4-30h126.2l-2.6-30.1zM381.1 380.9h-125l-2.3 30.1H380l-1.1 30 75.9-45.1-72.5-45z" fill="%23FFFFFF"/></g><g id="SVGRepo_iconCarrier"><path d="M77 403.4v228.5c1.5 93.7 195.7 183.5 435 183.5s433.4-89.8 435-183.5V403.4H77z" fill="%231B9BDB"/><path d="M947 402.7c0 99.4-194.8 194-435 194s-435-94.6-435-194 194.8-180 435-180 435 80.5 435 180z" fill="%233ED6FF"/><path d="M474.1 311.4H503l0.1 63.2h29.5l-0.7-63.2h28.9l-43.7-75.1zM533 417.2h-29.9l0.1 73.9h-30.6l46.2 75.2 45.5-75.2h-30.6zM654.5 380.9l-1.4-30-72.1 45 76.4 45.1-1.4-30h126.2l-2.6-30.1zM381.1 380.9h-125l-2.3 30.1H380l-1.1 30 75.9-45.1-72.5-45z" fill="%23FFFFFF"/></g></svg>',
   style: {
     fill: "#DEE9FF",
@@ -4891,6 +4746,9 @@ const graph = new G6.Graph({
     },
     position: "bottom",
     offset: 1,
+    formatter: (node) => {
+      return node.id; // Use the node's "id" attribute as the label text
+    },
   },
   },
   defaultEdge: {
@@ -4903,16 +4761,16 @@ const graph = new G6.Graph({
           // fill: "#999",
           stroke: "#FDFEFF",
           padding: [1, 1, 1, 1],
-          radius: 6,
+          radius: 56,
         },
         fillOpacity: 0,
         strokeOpacity: 0,
       },
     },
     style: {
-      width: 90,
+      lineWidth: 10,
       cursor: true,
-      opacity: 0.6,
+      opacity: 2,
       endArrow: {
         path: G6.Arrow.triangle(0, 0, 0),
         d: 25,
@@ -4927,7 +4785,7 @@ const graph = new G6.Graph({
     },
     edgeStateStyles: {
       highlight: {
-        lineWidth: 5,
+        lineWidth: 15,
       },
     },
     loopCfg: {
@@ -5012,105 +4870,105 @@ function clearAllStats() {
   graph.setAutoPaint(true);
 }
 
-// graph.on("node:mouseenter", function (e) {
-//   const item = e.item;
-//   const connectedNodes = new Set();
-//   const connectedEdges = new Set();
+graph.on("node:mouseenter", function (e) {
+  const item = e.item;
+  const connectedNodes = new Set();
+  const connectedEdges = new Set();
 
-//   graph.getEdges().forEach(function (edge) {
-//     if (edge.getSource() === item || edge.getTarget() === item) {
-//       connectedEdges.add(edge);
-//       if (edge.getSource() === item) {
-//         connectedNodes.add(edge.getTarget());
-//       } else {
-//         connectedNodes.add(edge.getSource());
-//       }
-//     }
-//   });
+  graph.getEdges().forEach(function (edge) {
+    if (edge.getSource() === item || edge.getTarget() === item) {
+      connectedEdges.add(edge);
+      if (edge.getSource() === item) {
+        connectedNodes.add(edge.getTarget());
+      } else {
+        connectedNodes.add(edge.getSource());
+      }
+    }
+  });
 
-//   graph.getNodes().forEach(function (node) {
-//     if (node === item || connectedNodes.has(node)) {
-//       graph.setItemState(node, "dark", false);
-//       graph.setItemState(node, "highlight", true);
-//       const labelElements = node
-//         .getContainer()
-//         .findAll((element) => element.get("className") === "node-label");
-//       if (labelElements) {
-//         labelElements.forEach((label) => {
-//           label.attr("fillOpacity", 1); // Display node labels
-//           label.attr("stroke-opacity", 1); // Adjust opacity as needed
-//         });
-//       }
-//     } else {
-//       graph.setItemState(node, "dark", true);
-//       const labelElements = node
-//         .getContainer()
-//         .findAll((element) => element.get("className") === "node-label");
-//       if (labelElements) {
-//         labelElements.forEach((label) => {
-//           label.attr("fillOpacity", 0); // Dim node labels
-//           label.attr("stroke-opacity", 0); // Adjust opacity as needed
-//         });
-//       }
-//     }
-//   });
+  graph.getNodes().forEach(function (node) {
+    if (node === item || connectedNodes.has(node)) {
+      graph.setItemState(node, "dark", false);
+      graph.setItemState(node, "highlight", true);
+      const labelElements = node
+        .getContainer()
+        .findAll((element) => element.get("className") === "node-label");
+      if (labelElements) {
+        labelElements.forEach((label) => {
+          label.attr("fillOpacity", 1); // Display node labels
+          label.attr("stroke-opacity", 1); // Adjust opacity as needed
+        });
+      }
+    } else {
+      graph.setItemState(node, "dark", true);
+      const labelElements = node
+        .getContainer()
+        .findAll((element) => element.get("className") === "node-label");
+      if (labelElements) {
+        labelElements.forEach((label) => {
+          label.attr("fillOpacity", 0); // Dim node labels
+          label.attr("stroke-opacity", 0); // Adjust opacity as needed
+        });
+      }
+    }
+  });
 
-//   graph.getEdges().forEach(function (edge) {
-//     if (connectedEdges.has(edge)) {
-//       graph.setItemState(edge, "dark", false);
-//       graph.setItemState(edge, "highlight", true);
-//       edge.toFront();
-//       const labelElement = edge
-//         .getContainer()
-//         .findAll((element) => element.get("className") === "edge-label");
-//       if (labelElement) {
-//         labelElement.forEach((label) => {
-//           label.attr("fillOpacity", 1); // Display edge labels
-//           label.attr("stroke-opacity", 1); // Adjust opacity as needed
-//         });
-//       }
-//     } else {
-//       graph.setItemState(edge, "dark", true);
-//       const labelElement = edge
-//         .getContainer()
-//         .findAll((element) => element.get("className") === "edge-label");
-//       if (labelElement) {
-//         labelElement.forEach((label) => {
-//           label.attr("fillOpacity", 0); // Dim edge labels
-//           label.attr("stroke-opacity", 0); // Adjust opacity as needed
-//         });
-//       }
-//     }
-//   });
+  graph.getEdges().forEach(function (edge) {
+    if (connectedEdges.has(edge)) {
+      graph.setItemState(edge, "dark", false);
+      graph.setItemState(edge, "highlight", true);
+      edge.toFront();
+      const labelElement = edge
+        .getContainer()
+        .findAll((element) => element.get("className") === "edge-label");
+      if (labelElement) {
+        labelElement.forEach((label) => {
+          label.attr("fillOpacity", 1); // Display edge labels
+          label.attr("stroke-opacity", 1); // Adjust opacity as needed
+        });
+      }
+    } else {
+      graph.setItemState(edge, "dark", true);
+      const labelElement = edge
+        .getContainer()
+        .findAll((element) => element.get("className") === "edge-label");
+      if (labelElement) {
+        labelElement.forEach((label) => {
+          label.attr("fillOpacity", 0); // Dim edge labels
+          label.attr("stroke-opacity", 0); // Adjust opacity as needed
+        });
+      }
+    }
+  });
 
-//   graph.paint();
-// });
-// graph.on("node:mouseleave", clearAllStats);
-// graph.on("canvas:click", clearAllStats);
+  graph.paint();
+});
+graph.on("node:mouseleave", clearAllStats);
+graph.on("canvas:click", clearAllStats);
 
 // Update edge styles after rendering
 
 
 
-const edgeItems = graph.getEdges();
-edgeItems.forEach(function (e) {
-  const lineWidth = 20;
-  const strokeOpacity = 2;
-  let stroke = 'l(0) 0:' + beginColor + ' 1:' + endColor;
-  const sourceModel = e.getSource().getModel();
-  const targetModel = e.getTarget().getModel();
-  if (sourceModel.x > targetModel.x) {
-    stroke = 'l(0) 0:' + endColor + ' 1:' + beginColor;
-  }
-  e.update({
-    style: {
-      lineWidth,
-      strokeOpacity,
-      stroke,
-    },
-  });
-});
-graph.paint();
+// const edgeItems = graph.getEdges();
+// edgeItems.forEach(function (e) {
+//   const lineWidth = 20;
+//   const strokeOpacity = 2;
+//   let stroke = 'l(0) 0:' + beginColor + ' 1:' + endColor;
+//   const sourceModel = e.getSource().getModel();
+//   const targetModel = e.getTarget().getModel();
+//   if (sourceModel.x > targetModel.x) {
+//     stroke = 'l(0) 0:' + endColor + ' 1:' + beginColor;
+//   }
+//   e.update({
+//     style: {
+//       lineWidth,
+//       strokeOpacity,
+//       stroke,
+//     },
+//   });
+// });
+// graph.paint();
 
 // Handle node clicks to expand/collapse clusters
 // Handle node clicks to expand/collapse clusters
@@ -5181,13 +5039,19 @@ graph.on('node:click', function (e) {
       style: {
         fill: color,
         stroke: '#666',
-        lineWidth: 20,
+        lineWidth: 10,
       },
       cluster: model.cluster,
       exportValue: center.exportValue,
       region,
       countries: center.count,
     });
+
+    function getRandomColor() {
+      // Generate a random hexadecimal color code
+      return '#' + Math.floor(Math.random()*16777215).toString(16);
+    }
+    
 
     // Add edges between clusters and non-cluster nodes
     graphEdges.forEach(function (ge) {
@@ -5199,14 +5063,16 @@ graph.on('node:click', function (e) {
       ) {
         const sourceId = sourceModel.cluster === model.cluster ? clusterNodeId : sourceModel.id;
         const targetId = targetModel.cluster === model.cluster ? clusterNodeId : targetModel.id;
-        const stroke = 'l(0) 0:' + beginColor + ' 1:' + endColor;
+
+        const edgeColor = getRandomColor();
+
         graph.addItem('edge', {
           source: sourceId,
           target: targetId,
           id: 'cluster-edge-' + sourceId + '-' + targetId,
           style: {
-            stroke,
-            lineWidth:40,
+            stroke:edgeColor, 
+            lineWidth:15,
             strokeOpacity: 1,
           },
         });
