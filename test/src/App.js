@@ -3,13 +3,15 @@ import './App.css';
 import Collapse from './Collapseradial';
 // import CollapseForce from './CollapseForse';
 import CollapseForce from './CollapseFructherman';
+import LouvainGraph from './Louvain';
 import Topology from './Graph';
 
 function App() {
   return (
     <div className="App">
-      <CollapseForce/>
+      {/* <CollapseForce/> */}
       {/* <Topology/> */}
+      <LouvainGraph/>
 
     </div>
   );
