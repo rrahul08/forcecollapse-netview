@@ -6797,30 +6797,29 @@ const LouvainGraph = () => {
 
       graph.changeData(data);
 
-      // Handle click event on nodes
-      graph.on('node:click', (evt) => {
-        const node = evt.item;
-        const model = node.getModel();
-        const clusterId = model.label.split(' ')[1]; // Assuming label is 'Cluster X'
-        const nodesToProcess = graph.getNodes().filter(n => n.getModel().label === `Cluster ${clusterId}`);
+   // Handle click event on nodes
+graph.on('node:click', (evt) => {
+  const node = evt.item;
+  const model = node.getModel();
+  const clusterId = model.label.split(' ')[1]; // Assuming label is 'Cluster X'
+  const nodesToProcess = graph.getNodes().filter(n => n.getModel().label === `Cluster ${clusterId}`);
 
-        if (nodesToProcess.some(n => n.getModel().size === 1)) {
-          // Expand nodes
-          nodesToProcess.forEach(n => {
-            const originalModel = n.getModel();
-            graph.updateItem(n, { x: originalModel.originalX, y: originalModel.originalY, size: 30 }); // Reset position and size
-          });
-        } else {
-          // Shrink nodes
-          const { x, y } = model;
-          nodesToProcess.forEach(n => {
-            if (n !== node) {
-              graph.updateItem(n, { x, y, size: 1 }); // Shrink other nodes
-            }
-          });
-        }
-      });
-
+  if (nodesToProcess.some(n => n.getModel().size === 1)) {
+    // Expand nodes
+    nodesToProcess.forEach(n => {
+      const originalModel = n.getModel();
+      graph.updateItem(n, { x: originalModel.originalX, y: originalModel.originalY, size: 30 }); // Reset position and size
+    });
+  } else {
+    // Set a fixed position for the cluster center
+    const clusterCenterX = 300; // Example fixed x-coordinate
+    const clusterCenterY = 300; // Example fixed y-coordinate
+    // Shrink nodes and position them at the cluster center
+    nodesToProcess.forEach(n => {
+      graph.updateItem(n, { x: clusterCenterX, y: clusterCenterY, size: 1 }); // Move all nodes to the cluster center
+    });
+  }
+});
       console.log(result);
     }
   }, [graph]);
